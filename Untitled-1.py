@@ -74,7 +74,7 @@ def register_new_user():
     driver.find_element(By.CSS_SELECTOR, "input.btn.btn-primary").click()
     time.sleep(3)
 
-# Поиска
+# Поиск
 def perform_search():
     driver.get("https://demo-opencart.ru/index.php")
     search_input = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.NAME, "search")))
@@ -88,6 +88,5 @@ check_empty_category()
 register_new_user()
 perform_search()
 
-# Закрытие браузера после выполнения тестов
 driver.quit()
 
